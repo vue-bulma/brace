@@ -1,0 +1,25 @@
+{
+  "name": "vue-bulma-brace",
+  "version": "0.0.1",
+  "description": "Code editor powered by Vuejs and browserify Ace.",
+  "repository": "vue-bulma/brace",
+  "main": "src/Brace.vue",
+  "peerDependencies": {
+    "bulma": "^0.2",
+    "vue": ">=2.0.0-beta.0"
+  },
+  "scripts": {},
+  "keywords": [
+    "vue",
+    "bulma",
+    "vue-bulma",
+    "vue-bulma-component",
+    "vue-bulma-brace",
+    "brace"
+  ],
+  "dependencies": {
+    "brace": "^0.9.1"
+  },
+  "author": "Luventa Pan",
+  "license": "MIT"
+}
