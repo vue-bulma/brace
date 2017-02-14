@@ -71,6 +71,9 @@ export default {
         require('brace/theme/' + themeObj.name)
         editor.setTheme(themeObj.theme)
       }
+    },
+    emitCode () {
+      this.$emit('code-change', editor.getValue())
     }
   },
 
@@ -79,6 +82,7 @@ export default {
     this.setMode()
     this.setTheme()
     editor.$blockScrolling = Infinity
+    editor.getSession().on('change', this.emitCode)
   },
 
   watch: {
