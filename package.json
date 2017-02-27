@@ -1,6 +1,6 @@
 {
   "name": "vue-bulma-brace",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Code editor powered by Vuejs and browserify Ace.",
   "repository": "vue-bulma/brace",
   "main": "src/Brace.vue",
