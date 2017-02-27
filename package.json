@@ -5,10 +5,9 @@
   "repository": "vue-bulma/brace",
   "main": "src/Brace.vue",
   "peerDependencies": {
-    "bulma": ">=0.2",
+    "bulma": ">=0.3",
     "vue": ">=2"
   },
-  "scripts": {},
   "keywords": [
     "vue",
     "bulma",

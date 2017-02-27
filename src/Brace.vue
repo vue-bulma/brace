@@ -6,11 +6,12 @@
 import * as brace from 'brace'
 import 'brace/ext/modelist'
 import 'brace/ext/themelist'
+
 const modelist = brace.acequire('ace/ext/modelist')
 const themelist = brace.acequire('ace/ext/themelist')
 var editor
 
-var regMap = {
+const regMap = {
   isInt: new RegExp('^\\d+$')
 }
 
@@ -35,18 +36,18 @@ export default {
     codefolding: {
       type: String,
       default: 'markbegin',
-      validator: (val) => ['manual', 'markbegin', 'markbeginend'].indexOf(val) > -1
+      validator: (val) => ['manual', 'markbegin', 'markbeginend'].includes(val)
     },
     // todo key binding
     softwrap: {
       type: String,
       default: 'free',
-      validator: (val) => ['off', 'free'].indexOf(val) > -1 || regMap.isInt.test(val)
+      validator: (val) => (['off', 'free'].includes(val) || regMap.isInt.test(val))
     },
     selectionstyle: {
       type: String,
       default: 'text',
-      validator: (val) => ['text', 'line'].indexOf(val) > -1
+      validator: (val) => ['text', 'line'].includes(val)
     },
     highlightline: {
       type: Boolean,
