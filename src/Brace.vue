@@ -1,5 +1,5 @@
 <template>
-  <div id='vue-bulma-editor'></div>
+  <div :id='id'></div>
 </template>
 
 <script>
@@ -17,6 +17,10 @@ const regMap = {
 
 export default {
   props: {
+    id: {
+      type: String,
+      default: 'vue-bulma-editor'
+    },
     mode: {
       type: String,
       default: 'json',
@@ -79,7 +83,7 @@ export default {
   },
 
   mounted () {
-    editor = brace.edit('vue-bulma-editor')
+    editor = brace.edit(this.id)
     this.setMode()
     this.setTheme()
     editor.$blockScrolling = Infinity
