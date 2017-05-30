@@ -77,6 +77,9 @@ export default {
         editor.setTheme(themeObj.theme)
       }
     },
+    setCode (code) {
+        editor.session.setValue(code);
+    },
     emitCode () {
       this.$emit('code-change', editor.getValue())
     }
