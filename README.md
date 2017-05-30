@@ -21,7 +21,9 @@ $ npm install vue-bulma-brace --save
       :codefolding="'markbegin'"
       :softwrap="'free'"
       :selectionstyle="'text'"
-      :highlightline="true">
+      :highlightline="true"
+      @code-change="codeChange"
+      ref="editor">
     </brace>
   </div>
 </template>
@@ -32,6 +34,15 @@ import Brace from 'vue-bulma-brace'
 export default {
   components: {
     Brace
+  },
+  mounted () {
+    // Set the initial value
+    this.$refs.editor.setCode("// the initial value")
+  },
+  methods: {
+    codeChange (newValue) {
+      // Use the value
+    }
   }
 }
 </script>
