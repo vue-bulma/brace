@@ -75,6 +75,10 @@ export default {
     },
     emitCode () {
       this.$emit('code-change', editor.getValue())
+    },
+    emitSelection () {
+      let value = editor.session.getTextRange(editor.getSelectionRange())
+      this.$emit('selection-change', value)
     }
   },
 
@@ -84,6 +88,7 @@ export default {
     this.setTheme()
     editor.$blockScrolling = Infinity
     editor.getSession().on('change', this.emitCode)
+    editor.getSession().selection.on('changeSelection', this.emitSelection)
   },
 
   watch: {
