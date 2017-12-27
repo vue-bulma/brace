@@ -53,7 +53,7 @@ export default {
       type: Boolean,
       default: true
     },
-    initialValue: {
+    editorValue: {
       type: String,
       default: ''
     }
@@ -93,7 +93,7 @@ export default {
     editor.$blockScrolling = Infinity
     editor.getSession().on('change', this.emitCode)
     editor.getSession().selection.on('changeSelection', this.emitSelection)
-    editor.setValue(this.initialValue)
+    editor.setValue(this.editorValue)
   },
 
   watch: {
@@ -118,6 +118,9 @@ export default {
     },
     highlightline (newVal) {
       editor.setHighlightActiveLine(newVal)
+    },
+    editorValue (newVal) {
+      editor.setValue(newVal)
     }
   }
 }
