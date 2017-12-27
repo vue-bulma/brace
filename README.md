@@ -22,7 +22,7 @@ $ npm install vue-bulma-brace --save
       :softwrap="'free'"
       :selectionstyle="'text'"
       :highlightline="true"
-      :editorValue="Hello World!">
+      :editorValue="'Hello World!'">
     </brace>
   </div>
 </template>
